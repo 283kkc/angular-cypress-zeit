@@ -3,7 +3,7 @@ const basicAuth = require('express-basic-auth');
 
 const app = express();
 
-app.use('/admin', basicAuth({
+app.use('/*', basicAuth({
   challenge: true,
   realm: 'now-basic-auth-node-express',
   users: { 'admin': 'admin' },
