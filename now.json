@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(assets/.+|.+\\.css|.+\\.js)",
+      "dest": "/angular-tour-of-heroes/$1"
+    },
+    {
+      "src": "/(.*).html",
+      "dest": "/angular-tour-of-heroes/$1.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/angular-tour-of-heroes/index.html"
+    }
+  ]
+}
